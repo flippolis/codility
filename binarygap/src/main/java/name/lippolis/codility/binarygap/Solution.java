@@ -28,9 +28,4 @@ public class Solution {
         return bg;
     }
 
-    public static void main(String[] args) {
-        int s = new Solution().solution(32);
-        System.out.println("Solution: " + s);
-    }
-
 }
