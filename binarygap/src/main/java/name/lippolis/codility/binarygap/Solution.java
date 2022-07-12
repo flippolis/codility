@@ -14,7 +14,6 @@ public class Solution {
         while (matcher.find()) {
             if (matcher.groupCount() > 0) {
                 String group = matcher.group(1);
-                System.out.println("Group: " + group);
 
                 if (bg < group.length()) {
                     bg = group.length();
