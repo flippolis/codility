@@ -1,31 +1,30 @@
 package name.lippolis.codility.binarygap;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Solution {
 
     public int solution(int n) {
         String nb = Integer.toBinaryString(n);
-        int bg = 0;
+        int lnb = nb.length();
+        int finalBinaryGap = 0;
+        int localBinaryGap = 0;
+        boolean foundOpening = false;
 
-        Pattern pattern = Pattern.compile("1(0*)1");
-        Matcher matcher = pattern.matcher(nb);
-        while (matcher.find()) {
-            if (matcher.groupCount() > 0) {
-                String group = matcher.group(1);
-
-                if (bg < group.length()) {
-                    bg = group.length();
+        for (int i = 0; i < lnb; i++) {
+            if ('1' == nb.charAt(i)) {
+                if (!foundOpening) {
+                    foundOpening = true;
+                } else {
+                    if (finalBinaryGap < localBinaryGap) {
+                        finalBinaryGap = localBinaryGap;
+                    }
+                    localBinaryGap = 0;
                 }
-            }
-
-            if (matcher.end() < nb.length() && nb.charAt(matcher.end()) != '1') {
-                matcher = matcher.region(matcher.end() - 1, nb.length());
+            } else {
+                localBinaryGap++;
             }
         }
 
-        return bg;
+        return finalBinaryGap;
     }
 
 }
