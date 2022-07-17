@@ -11,6 +11,7 @@
     <modules>
         <module>binarygap</module>
         <module>parkingbill</module>
+        <module>paritydegree</module>
     </modules>
 
 </project>
