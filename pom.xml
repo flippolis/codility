@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>binarygap</module>
+        <module>parkingbill</module>
     </modules>
 
 </project>
