@@ -12,6 +12,7 @@
         <module>binarygap</module>
         <module>parkingbill</module>
         <module>paritydegree</module>
+        <module>firstunique</module>
     </modules>
 
     <properties>
