@@ -34,9 +34,6 @@ public class Solution {
             });
         }
 
-        // System.out.println(numWithCardinality);
-        // System.out.println(uniqueWithPosition);
-
         return num.get();
     }
 
