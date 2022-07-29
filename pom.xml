@@ -13,6 +13,7 @@
         <module>parkingbill</module>
         <module>paritydegree</module>
         <module>firstunique</module>
+        <module>arrlistlen</module>
     </modules>
 
     <properties>
